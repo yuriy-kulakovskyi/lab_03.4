@@ -15,8 +15,8 @@ int main() {
   cout << "y = "; cin >> y;
   cout << "R = "; cin >> R;
 
-  if (y <= 0 && y <= pow((x - 1), 2) && abs(y) <= R && x <= 0 ||
-    y >= 0 && y >= pow((x - 1), 2) && abs(y) <= R && x >= 0)
+  if ((pow(x, 2) + pow(y, 2) <= pow(R, 2)) && x <= 0 && y <= 0 ||
+    y <= pow((x - 1), 2) && x >= 0 && y >= 0 && pow(x, 2) + pow(y, 2) <= pow(R, 2))
     cout << "yes" << endl;
   else
     cout << "no" << endl;
